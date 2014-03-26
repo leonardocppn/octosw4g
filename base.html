@@ -1,0 +1,38 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-controller="octoController">
+	<head>
+		<title ng-bind-template="Octocat {{query.id}}">Octocat</title>
+		<!--<link href="style-my-tooltips.css" rel="stylesheet" type="text/css" />-->
+		<link href="stile/css.css" rel="stylesheet" type="text/css">
+
+		<!-- <script type="text/javascript" src="http://static.tumblr.com/7qjmkr5/IUmmdsy41/jquery.style-my-tooltips.js"></script>
+		<script>(function($){$(document).ready(function(){$("[title]").style_my_tooltips();});})(jQuery);</script>-->
+ 
+		<link href='http://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet' type='text/css'>  <!-- font-family: 'Audiowide', cursive; -->
+ 
+		<link href='http://fonts.googleapis.com/css?family=Rationale' rel='stylesheet' type='text/css'> <!-- font-family: 'Rationale', sans-serif; -->
+ 
+
+	</head>
+	<body>	
+	<div id="content" >
+		<div id="title" ng-bind-template="{{query.id}} Octocat">Octocat</div>
+		<div id="line"></div>
+		<div id="links">
+			<div ng-repeat="octo in octos">
+				<a href="#/{{octo.id}}" ng-click="modificaQ($index)">{{octo.id}}</a>
+			</div>	
+		</div>		 
+		<div >
+		<!-- SIDEBAR IMAGE HERE -->
+		<img ng-src="{{query.image}}" border="0"></img>
+		<div id="info">
+		  {{query.desc}}
+		</div> <!-- inf  -->
+		<!-- KEEP ON SCROLLING-->
+		</div>
+	</div> 
+		 <!-- content -->
+	<script data-main="app/scripts/main" src="/Scripts/require.js"></script>
+	</body>
+</html>
